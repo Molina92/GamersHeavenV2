@@ -81,7 +81,7 @@ article {
 
 article h1 {
     font-weight: 300;
-    
+
 }
 
 
@@ -104,6 +104,11 @@ article p {
     justify-content: center;
 }
 
+/*Product Section*/
+section {
+    grid-area: section;
+    min-height: 100vh;
+}
 
 
 
