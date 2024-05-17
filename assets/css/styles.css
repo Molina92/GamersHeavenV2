@@ -4,6 +4,8 @@
     --font: "Poppins", sans-serif;
     --bg: #101b20;
     --color-font1: #E7B299;
+    --color-font2: #101820;
+    --normal-padding: 2rem;
 }
 
 * {
@@ -73,7 +75,7 @@ article {
     grid-area: article;
     display: flex;
     align-items: center;
-    padding: 2rem;
+    padding: var(--normal-padding);
     height: 100vh;
     text-align: justify;
 
@@ -120,8 +122,57 @@ figure {
     background-size: cover;
 }
 
-/*Product Section*/
+/*Product Section (Card Section)*/
 section {
     grid-area: section;
     min-height: 100vh;
+    padding: var(--normal-padding);
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
+
+.card {
+    font-weight: 300;
+    height: 500px;
+    width: 80%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .card-img {
+    width: 100%;
+    height: 80%;
+    background: url('../img/product1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card .card-title {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.card .card-price p {
+    font-size: 1.3rem;
+}
+
+.card-button {
+    width: 100%;
+}
+
+.button {
+    background: #c1c6c8;
+    border: none;
+    color: var(--color-font2);
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;    
+    width: 100%;
+    font-weight: 600;
+}
+
