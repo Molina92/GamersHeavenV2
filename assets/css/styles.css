@@ -5,6 +5,7 @@
     --bg: #101b20;
     --color-font1: #E7B299;
     --color-font2: #101820;
+    --color-font3: #c1c6c8;
     --normal-padding: 2rem;
 }
 
@@ -129,8 +130,7 @@ section {
     padding: var(--normal-padding);
     display: grid;
     grid-template-columns: auto;
-    align-items: center;
-    justify-items: center;
+    row-gap: 2rem;
 }
 
 section h2 {
@@ -139,7 +139,6 @@ section h2 {
 }
 
 #card {
-    width: 100%;
     display: grid;
     justify-items: center;
 }
@@ -148,19 +147,19 @@ section h2 {
     font-weight: 300;
     height: 500px;
     width: 80%;
-    border: 1px solid white;
+    border: 1px solid rgb(0, 209, 204);
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 30px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 10px rgb(0, 209, 204), 0 1px 2px rgb(0, 209, 204);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    filter:grayscale(100%);
+    /* filter:grayscale(100%); */
     margin-top: 2rem;
 }
 
 .card:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 40px rgb(255, 255, 255), 0 10px 10px rgba(255, 255, 255, 0.22);
 }
 
 .card .card-img {
@@ -171,6 +170,52 @@ section h2 {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.card .card-img2 {
+    width: 100%;
+    height: 80%;
+    background: url('../img/product2.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card .card-img3 {
+    width: 100%;
+    height: 80%;
+    background: url('../img/product3.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card .card-img4 {
+    width: 100%;
+    height: 80%;
+    background: url('../img/product4.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card .card-img5 {
+    width: 100%;
+    height: 80%;
+    background: url('../img/product5.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card .card-img6 {
+    width: 100%;
+    height: 80%;
+    background: url('../img/product6.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 .card .card-title {
     font-weight: 200;
@@ -199,7 +244,15 @@ section h2 {
 }
 
 .button:hover {
-    background: black;
+    background: rgb(0, 209, 204);
+    color: var(--color-font3);3
+}
+
+footer {
+    color: var(--color-font1);
+    padding: var(--normal-padding);
+    width: 100%;
+    justify-items: center;
 }
 
 
