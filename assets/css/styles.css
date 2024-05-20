@@ -30,7 +30,7 @@
     font-weight: 400;
     font-style: normal;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-areas:
         'aside'
         'header'
@@ -68,7 +68,7 @@ aside ul a {
 /*Principal Image*/
 header {
     grid-area: header;
-    height: 100vh;
+    height: 100vw;
 }
 
 .image {
@@ -86,7 +86,7 @@ article {
     display: flex;
     align-items: center;
     padding: var(--normal-padding);
-    height: 100vh;
+    height: 100vw;
     text-align: justify;
 
 }
@@ -119,7 +119,7 @@ article p {
 figure {
     grid-area: figure;
     width: 100%;
-    height: 78vh;
+    height: 78vw;
 }
 
 .image2 {
@@ -135,10 +135,10 @@ figure {
 /*Product Section (Card Section)*/
 section {
     grid-area: section;
-    min-height: 100vh;
+    min-height: 100vw;
     padding: var(--normal-padding);
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     row-gap: 2rem;
 }
 
