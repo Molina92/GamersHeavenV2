@@ -4,26 +4,28 @@
     --font: "Poppins", sans-serif;
     --bg: #101b20;
     --color-font1: #E7B299;
+    --color-font2: #101820;
+    --normal-padding: 2rem;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background: var(--bg);
 }
 
 #root {
     font-family: var(--font);
     font-weight: 400;
     font-style: normal;
-    background: var(--bg);
-    min-height: calc(100vh);
     display: grid;
     grid-template-columns: auto;
     grid-template-areas:
         'aside'
         'header'
         'article'
+        'figure'
         'section'
         'footer'
     ;
@@ -64,7 +66,7 @@ header {
     width: 100%;
     background: url('../img/header-mobile.png');
     background-position: center;
-    background-size: initial;
+    background-size: cover;
 }
 
 
@@ -73,7 +75,7 @@ article {
     grid-area: article;
     display: flex;
     align-items: center;
-    padding: 2rem;
+    padding: var(--normal-padding);
     height: 100vh;
     text-align: justify;
 
@@ -84,14 +86,13 @@ article h1 {
 
 }
 
-
 article p {
     font-weight: 200;
     margin-top: 1rem;
 }
 
 .article-icons {
-    display:flex;
+    display: flex;
     gap: 2rem;
     padding: 1rem;
     justify-content: center;
@@ -104,11 +105,94 @@ article p {
     justify-content: center;
 }
 
-/*Product Section*/
+/*Figure Section (Img)*/
+figure {
+    grid-area: figure;
+    width: 100%;
+    height: 78vh;
+}
+
+.image2 {
+    height: 900px;
+    width: 100%;
+    background: url('../img/back.jpg');
+    background-position: 40%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*Product Section (Card Section)*/
 section {
     grid-area: section;
     min-height: 100vh;
+    padding: var(--normal-padding);
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 
+section h2 {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.card {
+    font-weight: 300;
+    height: 500px;
+    width: 80%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    filter:grayscale(100%);
+    margin-top: 2rem;
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card .card-img {
+    width: 100%;
+    height: 80%;
+    background: url('../img/product1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card .card-title {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.card .card-price p {
+    font-size: 1.3rem;
+}
+
+.card-button {
+    width: 92%;
+}
+
+.button {
+    background: #c1c6c8;
+    border: none;
+    color: var(--color-font2);
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;    
+    width: 100%;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.button:hover {
+    background: black;
+}
 
 
