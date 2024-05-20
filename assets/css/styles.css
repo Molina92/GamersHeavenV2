@@ -30,7 +30,7 @@
     font-weight: 400;
     font-style: normal;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 5fr;
     grid-template-areas:
         'aside'
         'header'
@@ -138,7 +138,7 @@ section {
     min-height: 100vh;
     padding: var(--normal-padding);
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 5fr;
     row-gap: 2rem;
 }
 
