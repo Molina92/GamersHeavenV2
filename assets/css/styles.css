@@ -39,7 +39,7 @@
         'section'
         'footer'
     ;
-    color: white;
+    color: var(--color-font3);
 }
 
 /*Lateral menu*/
@@ -98,17 +98,19 @@ nav ul a {
 /*Principal Image*/
 header {
     grid-area: header;
-    height: 100vh;
+    height: calc(100vh - 40px);
 }
 
 .image {
     height: 100%;
-    width: 100%;
     background: url('../img/header-mobile.png');
     background-position: center;
     background-size: cover;
 }
 
+.header-text h1 {
+    display: none;
+}
 
 /*About Us Section*/
 article {
@@ -147,13 +149,11 @@ article p {
 /*Figure Section (Img)*/
 figure {
     grid-area: figure;
-    width: 100%;
     height: 78vh;
 }
 
 .image2 {
     height: 900px;
-    width: 100%;
     background: url('../img/back.jpg');
     background-position: 40%;
     background-repeat: no-repeat;
@@ -166,6 +166,9 @@ section {
     grid-area: section;
     min-height: 100vh;
     padding: var(--normal-padding);
+}
+
+.products {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 2rem;
@@ -173,7 +176,6 @@ section {
 
 section h2 {
     margin-top: 2rem;
-    width: 100%;
 }
 
 #card {
@@ -185,6 +187,7 @@ section h2 {
     font-weight: 300;
     height: 500px;
     width: 80%;
+    max-width: 350px;
     border: var(--card-border);
     display: flex;
     flex-direction: column;
@@ -337,4 +340,49 @@ footer div ul {
 
 .rights:hover {
     color: var(--hover-5);
+}
+
+@media (min-width: 576px) {
+    #root {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'nav'
+            'header'
+            'article'
+            'figure'
+            'section'
+            'footer'
+        ;
+    }
+
+    .image {
+        height: 100%;
+        background: url('../img/image.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .header-text h1 {
+        display: flex;
+        position: absolute;
+        top: 60%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        color: var(--color-font2);
+        background-color: rgba(255, 255, 255, 0.418);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 300;
+        font-size: 4rem;
+    }
+
+    section h2 {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .products {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
