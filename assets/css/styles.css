@@ -82,7 +82,7 @@ nav ul {
 .open nav {
     position: fixed;
     top: 0;
-    width: 90%;
+    width: 100%;
 }
 
 .open header {
