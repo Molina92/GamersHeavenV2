@@ -50,7 +50,6 @@ nav {
     align-items: center;
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     color: var(--color-font1);
-    position: sticky;
 }
 
 .menu-toggler {
@@ -83,7 +82,7 @@ nav ul {
 .open nav {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 90%;
 }
 
 .open header {
@@ -98,17 +97,20 @@ nav ul a {
 /*Principal Image*/
 header {
     grid-area: header;
+}
+
+.header-img-mobile {
+    width: 100%;
     height: calc(100vh - 40px);
 }
 
-.image {
+header div img {
     height: 100%;
-    background: url('../img/header-mobile.png');
-    background-position: center;
-    background-size: cover;
+    width: 100%;
+    object-fit: contain;
 }
 
-.header-text h1 {
+.header-text , .header-img-web {
     display: none;
 }
 
